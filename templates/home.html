@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        crossorigin="anonymous">
+        <title>Ecommerce</title>
+        <style>
+            *{
+                margin: 10px;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .logo img{
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                margin-left: auto;
+                margin-right: auto;  
+            }
+
+            .navbar{
+                display: flex;
+                align-items: center;
+                padding-right: 80px;
+                padding-left: 40px;
+                background: brown;
+                
+                
+            }
+
+            nav{
+                flex: 1;
+                text-align: right;
+                
+
+            }
+            nav ul{
+                display: inline-block;
+                margin-right: 20px;
+                
+            }
+
+            nav ul li{
+                display: inline-block;
+                margin-right: 20px;
+                
+            }
+            a {
+                text-decoration: none;
+                color: white;
+                
+            }
+
+            .footer{
+                background: brown;
+                padding: 60px 0px 20px;
+                margin: 20px;
+                font-size: 14px;
+            }
+
+            .footer p{
+                color: white;
+            }
+
+            .footer h3{
+                color: white;
+                margin-bottom: 20px;
+            }
+            .footer-col-1,
+            .footer-col-2,
+            .footer-col-3,
+            .footer-col-4 {
+                min-width: 250px;
+                margin-bottom: 20px;
+
+            }
+
+            .footer-col-1{
+                flex-basis: 30%;
+            }
+            .footer-col-2{
+                flex: 1;
+                text-align: center;
+            }
+
+            .footer-col-2 img{
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                margin-top: 20px;
+            }
+
+            .footer-col-3
+            .footer-col-4{
+                flex-basis: 12%;
+                text-align: center;
+            }
+            .footer-col-3{
+                flex:1;
+                text-align: center;
+            }
+            .footer-col-4{
+                flex:1;
+                text-align: center;
+            }
+
+            ul{
+                list-style-type:  none;
+            }
+
+            li{
+                color: white;
+
+            }
+
+            .logo-app{
+                margin-top: 20px;
+            }
+
+            .logo-app img{
+                width: 140px;
+            }
+
+            .footer hr {
+                border: none;
+                background: #b5b5b5;
+                height: 1px;
+                margin: 20px 0;
+            }
+
+            .copyright {
+                text-align: center;
+            }
+
+            .row2{
+                padding: 20px;
+                margin: 80px;
+                
+            }
+
+            select{
+                border: 1px sloid brown;
+                padding: 5px;
+
+            }
+
+
+
+            
+            
+
+            
+           
+
+
+        </style>
+
+    </head>
+    <body>
+        <!-- header -->
+        <div class="contaniner">
+            <div class="navbar">
+                <div class="logo">
+                    <a href=""><img src="https://cdn1.vectorstock.com/i/1000x1000/65/80/female-fashion-clothes-icon-vector-18456580.jpg" alt="Ecommerce"></a>
+        
+                </div>
+                <div class="title">
+                    <h1 style="text-align: right;"><i>Fashion Store</i></h1>
+                </div>
+                <nav>
+                    
+                    <ul id="elements">
+                        
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'register' %}">Register</a></li>
+                        <li><a href="{% url 'login' %}">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="small-container">
+            <div class="row row2">
+                <h2>All Products</h2>
+                <select>
+                    <option value="">Default Shorting</option>
+                    <option value="">Short by price</option>
+                    <option value="">Short by popularity</option>
+                    <option value="">Short by rating</option>
+                    <option value="">Short by sale</option>
+                </select>
+                
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>for android and ios</p>
+                        <div class="logo-app">
+                            <img src="https://i.ibb.co/KbPTYYQ/play-store.png" alt="" />
+                            <img src="https://i.ibb.co/hVM4X2p/app-store.png" alt="" />
+                        </div>
+
+                    </div>
+
+                    <div class="footer-col-2">
+                        <img src="https://cdn1.vectorstock.com/i/1000x1000/65/80/female-fashion-clothes-icon-vector-18456580.jpg">
+                        <p>we are willing to delivery you the best clothes and comfortable clothes</p>
+                    </div>
+
+                    <div class="footer-col-3">
+                        <h3>Usefull Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                          </ul>
+                    </div>
+
+                    <div class="footer-col-4">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr />
+                <p class="copyright"> Copyright &copy; 2024 - Fashion Store</p>
+            </div>
+        </div>
+
+        {% block content %}
+
+        {% endblock content %}
+    </body>
+</html>
